@@ -4,6 +4,7 @@ GEM
       rack
     cutest (1.2.1)
     dotenv (0.10.0)
+    pg (0.17.1)
     puma (2.8.2)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
@@ -12,6 +13,7 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.2.2)
+    sequel (4.8.0)
     tilt (1.4.1)
 
 PLATFORMS
@@ -21,8 +23,10 @@ DEPENDENCIES
   cuba
   cutest
   dotenv
+  pg
   puma
   rack-protection
   rack-test
   rake
+  sequel
   tilt

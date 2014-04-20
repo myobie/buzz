@@ -4,6 +4,7 @@ require "cuba"
 require "cuba/render"
 require "rack/protection"
 require_relative "cuba/terminal_matcher"
+require_relative "database"
 
 Cuba.use Rack::Session::Cookie, secret: ENV.fetch("SESSION_SECRET")
 Cuba.use Rack::Protection
