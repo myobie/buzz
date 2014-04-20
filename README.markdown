@@ -56,3 +56,46 @@ Alerts can be sent to:
 * Add regexes for subjects that select a alert mechanism
 * Build up rules over time based on usage for priorities, grouping,
   alerting, etc
+
+## Contributing
+
+Thanks for considering. Here's how to get started.
+
+### Setup
+
+```sh
+$ gem install bundler
+$ bundle
+$ bin/rake
+```
+
+If all tests pass then you are good to go (:
+
+### Where are things?
+
+This is a [cuba][] app. All of the request handlers are in `app.rb`. Tests
+are in `test/` and you should start with `test/app_test.rb` to get
+familiar with what's going on. All the tests are written in [cutest][].
+
+Configuration is **only** by `ENV` vars. If you didn't think to create a
+`.env` file at first, then one would have been created for you. Feel
+free to edit it to match your expected local dev environment. If you
+test environment is very different from your development environment,
+then feel free to add a `.env.test` which will superseed the normal
+`.env` file.
+
+Views should seem pretty normal, just follow along with how things are
+currently going.
+
+[cuba]: https://github.com/soveran/cuba
+[cutest]: https://github.com/djanowski/cutest
+
+### Why are things where they are?
+
+Cuba allows one to build an app in scopes, which I think will be
+important for this particular app. If the plan to build changable rules
+over time goes well then these scopes could be useful for building the
+urls to create, plan, and execute these rules. We'll see.
+
+It's also nice to break out of one's comfort zone and since this project
+is ambitious I think it warrents a different approach.
