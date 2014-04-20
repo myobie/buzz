@@ -11,7 +11,7 @@ end
 
 desc "Boot the puma server"
 task :server do
-  exec "bin/puma"
+  exec "bin/puma -C config/puma.rb"
 end
 
 desc "Load IRB with all the code already loaded"
