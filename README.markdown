@@ -87,6 +87,11 @@ then feel free to add a `.env.test` which will superseed the normal
 Views should seem pretty normal, just follow along with how things are
 currently going.
 
+Please use bundler for any gems or executables. If a gem has an
+executable then it should also have a binstub in `bin/`. Always run the
+binstubs and **do not** run the gem executables directly. Also, make a
+rake task for everything that would need to be run more than once.
+
 [cuba]: https://github.com/soveran/cuba
 [cutest]: https://github.com/djanowski/cutest
 
