@@ -1,2 +1,5 @@
-require "sequel"
-DB = Sequel.connect(ENV.fetch("DATABASE_URL"))
+Dir["database/*.rb"].each do |file|
+  require_relative file
+end
+
+Database::Schema.load

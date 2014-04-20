@@ -27,7 +27,9 @@ namespace :database do
 
   desc "Create the database, create the tables, and populate with seed data"
   task :setup => :create do
-    # build schema
+    require_relative "database/schema"
+    Database::Schema.load(force: true)
+    # Database::Seed.()
   end
 
   desc "Drop and resetup the database"
